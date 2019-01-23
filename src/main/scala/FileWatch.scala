@@ -18,7 +18,7 @@ object FileWatch {
     val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc)
     import sqlContext.implicits._
     
-    val result = sqlContext.sql("use ci_trans_upl")
+    val result = sqlContext.sql("use ci_trans_upl_prueba")
     var query = sqlContext.sql("SELECT * FROM tabla_final_bloqueos")
     var cuenta = query.filter(query("fec_ult_ope")==="2017-09-24").count()
     println("======================!!!!!!!!!!!!!!!!!!============================")
